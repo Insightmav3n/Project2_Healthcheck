@@ -1,6 +1,6 @@
 import time
 
-print("Welcome tp QuickHealth Pro Max – Terminal Edition")
+print("Welcome tp QuickHealth Pro Max")
 print()
 
 print("No loops. No functions. Just pure beginner Python logic ✨")
