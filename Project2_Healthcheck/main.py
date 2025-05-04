@@ -39,9 +39,11 @@ pre_existingcondition = input("🏥 Do you have any pre-existing conditions? (Ye
 
 # Risk scoring logic
 
-# ⚙️ 3. Risk Scoring Logic
 print("\n⚙️ Analyzing...")
 print("🧾 Your Health Summary")
+
+time.sleep(2)
+print("=" * 60)
 
 risk_score = 0
 
@@ -100,6 +102,42 @@ elif risk_score <= 6:
     print("🟠 Moderate Risk – Monitor your health and consider seeing a doctor. 🧡")
 else:
     print("🔴 High Risk – Please consult a healthcare professional immediately. ❤️")
+
+
+#  Personalized Advice
+
+print("\n📌 Personalized Advice")
+# Female and age ≥ 45 → recommend health screening Male and smoker → suggest quitting smoking Sleep < 6 → suggest getting more rest Mood = anxious → suggest relaxation/breathing Pre-existing conditions → suggest medical attention 
+
+if gender == 'female' and age >= 45:
+   print("Suggestion: Please consult a primary care physician for a health screening.")
+
+elif gender == 'male' and smoking=='Yes':
+    print("Suggestion: For better health, we suggest you quit smoking.")
+
+elif sleep_hours < 6:
+    print("Suggestion: It would be better if you rest more.")
+
+elif mood == 'anxious':
+    print("Suggestion: Try relaxation and breathing techniques to uplift your mood.")
+
+elif pre_existingcondition == 'Yes':
+    print("🔴 Caution: With pre-existing conditions, regular medical attention is important. Please consult your doctor.")
+
+
+print(f"🏥 For urgent care near you in {city.title()}, consider visiting your nearest walk-in clinic or using a local health directory.")
+
+print()
+
+print("🧠 Mental Wellness Tip")
+print("Take 10 minutes for yourself. Music, meditation, or even silence can help.")
+
+print()
+print()
+
+print(f"✅ Thank you {name_clean} for using QuickHealth Pro Max. Get well soon! 💙")
+
+
 
 
 
